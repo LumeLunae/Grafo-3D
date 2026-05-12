@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualizador de Grafos 3D</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div id="hud"></div>
+
+<!-- Menu oculto com "..." -->
+<div id="menu-oculto">
+  <button id="btn-menu">...</button>
+  <div id="menu-opcoes" class="menu-opcoes">
+    <button id="btn-tabela-adjacencia">Tabela de Adjacência</button>
+    <button id="btn-tabela-dfs">Tabela de Tempos DFS</button>
+  </div>
+</div>
+
+<!-- Modal da tabela de adjacência -->
+<div id="modal-tabela" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Tabela de Adjacência</h2>
+    <div id="tabela-container"></div>
+  </div>
+</div>
+
+<!-- Modal da tabela de tempos DFS -->
+<div id="modal-tabela-dfs" class="modal">
+  <div class="modal-content">
+    <span class="close-dfs">&times;</span>
+    <h2>Tabela de Tempos DFS</h2>
+    <div id="tabela-dfs-container"></div>
+  </div>
+</div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* fundo semitransparente */
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    pointer-events: none; /* impede que o HUD bloqueie cliques na cena */
+}
+
+/* Menu oculto */
+#menu-oculto {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#btn-menu {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btn-menu:hover {
+    background: rgba(0, 0, 0, 0.9);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+}
+
+.menu-opcoes {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    padding: 8px;
+    display: none;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.menu-opcoes.show {
+    display: block;
+}
+
+.menu-opcoes button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s ease;
+}
+
+.menu-opcoes button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Modal da tabela de adjacência */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    color: white;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close:hover {
+    color: white;
+}
+
+.close-dfs {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-dfs:hover {
+    color: white;
+}
+
+.modal-content h2 {
+    margin: 0 0 20px 0;
+    color: #00aaff;
+    font-size: 18px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+#tabela-container {
+    margin-top: 10px;
+}
+
+.tabela-adjacencia {
+    width: 100%;
+    border-collapse: collapse;
+    background: #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabela-adjacencia th,
+.tabela-adjacencia td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #444;
+    font-size: 14px;
+}
+
+.tabela-adjacencia th {
+    background: #00aaff;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.tabela-adjacencia tr:hover {
+    background: #3a3a3a;
+}
+
+.tabela-adjacencia td:first-child,
+.tabela-adjacencia th:first-child {
+    background: #0066aa;
+    font-weight: bold;
+    color: white;
+}
+
+/* Tabela de tempos DFS */
+.tabela-tempos-dfs {
+    width: 100%;
+    border-collapse: collapse;
+    background: #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabela-tempos-dfs th,
+.tabela-tempos-dfs td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #444;
+    font-size: 14px;
+}
+
+.tabela-tempos-dfs th {
+    background: #ff44cc;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.tabela-tempos-dfs tr:hover {
+    background: #3a3a3a;
+}
+
+.tabela-tempos-dfs td:first-child {
+    background: #cc0099;
+    font-weight: bold;
+    color: white;
+}
